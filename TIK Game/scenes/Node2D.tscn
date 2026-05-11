@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://duw8gka51phsw"]
+
+[ext_resource type="Script" uid="uid://2xisuilt2qlp" path="res://scenes/node_2d.gd" id="1_60lig"]
+[ext_resource type="PackedScene" uid="uid://0f545ri2u5mt" path="res://scenes/level_root.tscn" id="4_60lig"]
+[ext_resource type="AudioStream" uid="uid://bvhoi26uiohic" path="res://Assets/sound/xtremefreddy-game-music-loop-7-145285.mp3" id="4_74qev"]
+
+[node name="Main scene" type="Node2D" unique_id=1336411839]
+script = ExtResource("1_60lig")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=250948811]
+stream = ExtResource("4_74qev")
+autoplay = true
+
+[node name="LevelRoot" parent="." unique_id=1428251681 instance=ExtResource("4_60lig")]

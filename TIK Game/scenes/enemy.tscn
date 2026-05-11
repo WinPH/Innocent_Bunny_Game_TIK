@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b7ibcrsy3ja23"]
+
+[ext_resource type="Texture2D" uid="uid://cl31dwqi63a32" path="res://Assets/images/Enemy/enemy.png" id="1_7p1mj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md0e3"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ra3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md0e3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tegq"]
+size = Vector2(471, 181)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1260398000]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1117002941]
+sprite_frames = SubResource("SpriteFrames_4ra3w")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1084207968]
+position = Vector2(-2.5, -2.5)
+shape = SubResource("RectangleShape2D_8tegq")

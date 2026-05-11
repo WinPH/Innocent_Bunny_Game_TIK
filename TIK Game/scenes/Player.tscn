@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://b6qq8xyq2dvht"]
+
+[ext_resource type="Script" uid="uid://bwl1ia7rkniy2" path="res://scenes/player.gd" id="1_v6fml"]
+[ext_resource type="Texture2D" uid="uid://dkyeh4k6pgdh4" path="res://Assets/images/player/spritesheet_bunny death.png" id="2_qu4a1"]
+[ext_resource type="AudioStream" uid="uid://k6t1sau47dsw" path="res://Assets/sound/Jumping-player.wav" id="4_mdl7e"]
+[ext_resource type="AudioStream" uid="uid://bq3dfvwaa28k1" path="res://Assets/sound/Im-so-scared.mp3" id="5_qu4a1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70d11"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(686, 1938, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw2d6"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(0, 646, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khinc"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(686, 646, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3wef"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(2058, 646, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdl7e"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(686, 0, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu4a1"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(1372, 0, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bruh7"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(0, 0, 686, 646)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eyey"]
+atlas = ExtResource("2_qu4a1")
+region = Rect2(686, 0, 686, 646)
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70d11")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw2d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khinc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3wef")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdl7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu4a1")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bruh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eyey")
+}],
+"loop": true,
+"name": &"running",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khinc"]
+size = Vector2(592.5, 610)
+
+[node name="Player" type="CharacterBody2D" unique_id=168774814]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_v6fml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=832757000]
+position = Vector2(-2.3841858e-07, -0.5000038)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("3")
+animation = &"running"
+autoplay = "idle"
+frame_progress = 0.3375107
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334492791]
+position = Vector2(-8.499999, -19.999992)
+scale = Vector2(0.39999995, 0.39999995)
+shape = SubResource("RectangleShape2D_khinc")
+
+[node name="Jumpsound" type="AudioStreamPlayer2D" parent="." unique_id=81228177]
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("4_mdl7e")
+
+[node name="Scarysound" type="AudioStreamPlayer2D" parent="." unique_id=1413477042]
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("5_qu4a1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1254366889]
+limit_right = 10000001
+limit_smoothed = true
+position_smoothing_enabled = true
