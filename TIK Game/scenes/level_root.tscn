@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7kfaxxd5d1pa" path="res://Assets/images/TileMap/GRass tiles.png" id="1_olmbx"]
 [ext_resource type="PackedScene" uid="uid://b6qq8xyq2dvht" path="res://scenes/Player.tscn" id="2_ypoqj"]
+[ext_resource type="PackedScene" uid="uid://b7ibcrsy3ja23" path="res://scenes/enemy.tscn" id="3_w3gk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypoqj"]
 texture = ExtResource("1_olmbx")
@@ -357,3 +358,6 @@ tile_set = SubResource("TileSet_w3gk0")
 
 [node name="Player" parent="." unique_id=168774814 instance=ExtResource("2_ypoqj")]
 position = Vector2(69.99999, 423.99997)
+
+[node name="Enemy" parent="." unique_id=1260398000 instance=ExtResource("3_w3gk0")]
+position = Vector2(1551.9999, 650.99994)
