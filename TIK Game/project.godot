@@ -61,6 +61,12 @@ full_heal_test={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Player body"
+2d_render/layer_2="Hurtbox"
+2d_render/layer_3="Hitbox"
+
 [physics]
 
 common/enable_pause_aware_picking=true

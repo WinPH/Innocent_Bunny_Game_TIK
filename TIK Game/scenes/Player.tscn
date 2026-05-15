@@ -134,8 +134,6 @@ size = Vector2(186.66667, 229.16666)
 texture_filter = 1
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_v6fml")
-max_health = 6.0
-current_health = 6.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=832757000]
 position = Vector2(-2.3841858e-07, -0.5000038)
@@ -181,4 +179,3 @@ debug_color = Color(0.98853666, 0, 0.30609444, 0.41960785)
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="died" from="Hurtbox" to="." method="_on_hurtbox_died"]
-[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]

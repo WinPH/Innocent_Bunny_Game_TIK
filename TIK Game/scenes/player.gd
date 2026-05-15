@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jumpsound: AudioStreamPlayer2D = $Jumpsound
 @onready var scarysound: AudioStreamPlayer2D = $Scarysound
-@onready var hitbox: Hitbox = $Hitbox
+@onready var hitbox: Hitbox2D = $Hitbox
 @export var max_health: float = 100.0
 @export var current_health: float = 100.0 : set = set_current_health
 @export var invincible_time: float = 1.0
