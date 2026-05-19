@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bpotwxyw3wftb"]
+
+[ext_resource type="Script" uid="uid://bm5hoog4s2chj" path="res://Scripts/area_exit.gd" id="1_h1ymn"]
+[ext_resource type="Texture2D" uid="uid://chxd44ca14oav" path="res://Assets/images/portal.png" id="2_b3htj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ab8kl"]
+radius = 13.0
+
+[node name="area_exit" type="Area2D" unique_id=297317023]
+script = ExtResource("1_h1ymn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=294580335]
+texture = ExtResource("2_b3htj")
+region_enabled = true
+region_rect = Rect2(22, 0, 22, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=941946816]
+shape = SubResource("CircleShape2D_ab8kl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
