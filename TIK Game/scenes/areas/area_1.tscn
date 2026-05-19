@@ -17,6 +17,13 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="Curve2D" id="Curve2D_ay52s"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 87.14307, -2235.7144)
+}
+point_count = 2
+
 [node name="Area1" unique_id=2096620713 instance=ExtResource("1_1gyh0")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=1510501353]
@@ -31,3 +38,7 @@ position = Vector2(1319.0001, -189)
 curve = SubResource("Curve2D_h3qae")
 path_time = 3.0
 looping = true
+
+[node name="moving_platform3" parent="." index="4" unique_id=537370528 instance=ExtResource("2_dgl8q")]
+position = Vector2(4058.9998, -194.99998)
+curve = SubResource("Curve2D_ay52s")
