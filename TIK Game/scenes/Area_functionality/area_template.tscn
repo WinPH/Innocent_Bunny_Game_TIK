@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://2e0ssnh1w8i8" path="res://Assets/images/TileMap/tiles_1.png" id="1_vp1m1"]
 [ext_resource type="PackedScene" uid="uid://b6qq8xyq2dvht" path="res://scenes/Player.tscn" id="2_15caj"]
 [ext_resource type="PackedScene" uid="uid://bpotwxyw3wftb" path="res://scenes/area_exit.tscn" id="3_vp1m1"]
+[ext_resource type="PackedScene" uid="uid://ij38yythu0i4" path="res://scenes/energy_cell.tscn" id="4_15caj"]
 
 [sub_resource type="GDScript" id="GDScript_qds31"]
 script/source = "extends Node
@@ -371,3 +372,10 @@ jump_power = 60.0
 
 [node name="area_exit" parent="." unique_id=297317023 instance=ExtResource("3_vp1m1")]
 position = Vector2(-902, -314)
+
+[node name="moving platforms" type="Node2D" parent="." unique_id=436727156]
+
+[node name="Energy cells" type="Node2D" parent="." unique_id=1394210864]
+
+[node name="energy_cell" parent="Energy cells" unique_id=57796718 instance=ExtResource("4_15caj")]
+position = Vector2(-19, -265)
