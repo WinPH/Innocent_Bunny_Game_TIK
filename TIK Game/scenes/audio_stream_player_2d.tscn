@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://blnnlbiliej2d"]
+
+[ext_resource type="AudioStream" uid="uid://kqy3ee85slpi" path="res://Assets/sound/n2kstudio-music-for-game-fun-kid-game-163649.mp3" id="1_1udxr"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1300077011]
+stream = ExtResource("1_1udxr")
+autoplay = true

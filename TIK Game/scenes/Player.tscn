@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bwl1ia7rkniy2" path="res://Scripts/player.gd" id="1_v6fml"]
 [ext_resource type="AudioStream" uid="uid://k6t1sau47dsw" path="res://Assets/sound/Jumping-player.wav" id="4_mdl7e"]
 [ext_resource type="Script" uid="uid://dqolpsxq0bk28" path="res://Scripts/player_animator.gd" id="4_qu4a1"]
-[ext_resource type="AudioStream" uid="uid://bq3dfvwaa28k1" path="res://Assets/sound/Im-so-scared.mp3" id="5_qu4a1"]
 
 [sub_resource type="Animation" id="Animation_mdl7e"]
 length = 0.001
@@ -100,10 +99,6 @@ jump_power = 50.0
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="." unique_id=81228177]
 scale = Vector2(0.4, 0.4)
 stream = ExtResource("4_mdl7e")
-
-[node name="Scarysound" type="AudioStreamPlayer2D" parent="." unique_id=1413477042]
-scale = Vector2(0.4, 0.4)
-stream = ExtResource("5_qu4a1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1254366889]
 offset = Vector2(200, -100)

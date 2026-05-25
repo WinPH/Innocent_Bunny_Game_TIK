@@ -360,6 +360,9 @@ sources/0 = SubResource("TileSetAtlasSource_rrdbi")
 [node name="Area Template" type="Node2D" unique_id=2096620713]
 script = SubResource("GDScript_qds31")
 
+[node name="area_exit" parent="." unique_id=297317023 instance=ExtResource("3_vp1m1")]
+position = Vector2(-902, -314)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1510501353]
 scale = Vector2(9.5, 9.5)
 tile_map_data = PackedByteArray("AAADAAIAAAACAAYAAAADAAEAAAACAAUAAAADAAAAAAACAAUAAAADAP//AAACAAQAAAACAAIAAAABAAYAAAACAAEAAAABAAUAAAACAAAAAAABAAUAAAACAP//AAABAAQAAAABAAIAAAABAAYAAAABAAEAAAABAAUAAAABAAAAAAABAAUAAAABAP//AAABAAQAAAAAAAIAAAABAAYAAAAAAAEAAAABAAUAAAAAAAAAAAABAAUAAAAAAP//AAABAAQAAAD//wIAAAABAAYAAAD//wEAAAABAAUAAAD//wAAAAABAAUAAAD/////AAABAAQAAAD+/wIAAAABAAYAAAD+/wEAAAABAAUAAAD+/wAAAAABAAUAAAD+////AAABAAQAAAD9/wIAAAABAAYAAAD9/wEAAAABAAUAAAD9/wAAAAABAAUAAAD9////AAABAAQAAAD8/wIAAAABAAYAAAD8/wEAAAABAAUAAAD8/wAAAAABAAUAAAD8////AAABAAQAAAD7/wIAAAABAAYAAAD7/wEAAAABAAUAAAD7/wAAAAABAAUAAAD7////AAABAAQAAAD6/wIAAAABAAYAAAD6/wEAAAABAAUAAAD6/wAAAAABAAUAAAD6////AAABAAQAAAD5/wIAAAAAAAYAAAD5/wEAAAAAAAUAAAD5/wAAAAAAAAUAAAD5////AAAAAAQAAAA=")
@@ -370,12 +373,36 @@ position = Vector2(-444, -218)
 speed = 25.0
 jump_power = 60.0
 
-[node name="area_exit" parent="." unique_id=297317023 instance=ExtResource("3_vp1m1")]
-position = Vector2(-902, -314)
-
 [node name="moving platforms" type="Node2D" parent="." unique_id=436727156]
 
 [node name="Energy cells" type="Node2D" parent="." unique_id=1394210864]
 
 [node name="energy_cell" parent="Energy cells" unique_id=57796718 instance=ExtResource("4_15caj")]
-position = Vector2(-19, -265)
+position = Vector2(-191.00002, -252.00003)
+
+[node name="energy_cell2" parent="Energy cells" unique_id=774418543 instance=ExtResource("4_15caj")]
+position = Vector2(184.99997, -488)
+
+[node name="energy_cell3" parent="Energy cells" unique_id=1177567604 instance=ExtResource("4_15caj")]
+position = Vector2(179.99997, -358.00003)
+
+[node name="energy_cell4" parent="Energy cells" unique_id=1791736036 instance=ExtResource("4_15caj")]
+position = Vector2(55.99997, -364.00003)
+
+[node name="energy_cell5" parent="Energy cells" unique_id=1080713930 instance=ExtResource("4_15caj")]
+position = Vector2(-69.00002, -366.00003)
+
+[node name="energy_cell6" parent="Energy cells" unique_id=1641120597 instance=ExtResource("4_15caj")]
+position = Vector2(-191.00002, -383.00003)
+
+[node name="energy_cell7" parent="Energy cells" unique_id=1356845197 instance=ExtResource("4_15caj")]
+position = Vector2(-195.00002, -502.99997)
+
+[node name="energy_cell8" parent="Energy cells" unique_id=71081698 instance=ExtResource("4_15caj")]
+position = Vector2(-67.00001, -239)
+
+[node name="energy_cell9" parent="Energy cells" unique_id=1424223104 instance=ExtResource("4_15caj")]
+position = Vector2(62.000008, -503.99997)
+
+[node name="energy_cell10" parent="Energy cells" unique_id=2108401412 instance=ExtResource("4_15caj")]
+position = Vector2(-64, -497)

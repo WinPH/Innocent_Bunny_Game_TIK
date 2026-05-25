@@ -20,7 +20,7 @@ func set_up_area():
 
 func add_energy_cell():
 	energy_cells += 1
-	if energy_cells >= 4:
+	if energy_cells >= 10:
 		var portal = get_tree().get_first_node_in_group("area_exits") as AreaExit
 		portal.open()
 

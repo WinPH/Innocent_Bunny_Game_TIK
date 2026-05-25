@@ -2,10 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://0qyr6kq1dc88" path="res://Assets/images/Enemy/spritesheet_enemy2.png" id="1_7p1mj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_md0e3"]
-atlas = ExtResource("1_7p1mj")
-region = Rect2(0, 0, 1049, 599)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
 atlas = ExtResource("1_7p1mj")
 region = Rect2(1049, 0, 1049, 599)
@@ -26,9 +22,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_md0e3")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ra3w")
 }, {
@@ -51,7 +44,7 @@ size = Vector2(1011.5, 501.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2124250592]
 sprite_frames = SubResource("SpriteFrames_xwavj")
 animation = &"walk"
-frame_progress = 0.38384753
+frame_progress = 0.84439564
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1441472150]
 position = Vector2(-4, -20)

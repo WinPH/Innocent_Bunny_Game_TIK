@@ -6,10 +6,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ab8kl"]
 radius = 13.0
 
-[node name="area_exit" type="Area2D" unique_id=297317023]
+[node name="area_exit" type="Area2D" unique_id=297317023 node_paths=PackedStringArray("sprite") groups=["area_exits"]]
 scale = Vector2(12, 12)
 collision_layer = 65536
 script = ExtResource("1_h1ymn")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=294580335]
 z_index = -10

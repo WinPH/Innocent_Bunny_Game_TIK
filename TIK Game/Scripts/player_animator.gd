@@ -2,6 +2,7 @@ extends Node2D
 @export var Player : Player
 @export var animation_player: AnimationPlayer
 @export var sprite : Sprite2D
+@onready var jumpsound: AudioStreamPlayer2D = $"../Jumpsound"
 
 func _process(delta):
 	#flips character
@@ -19,5 +20,7 @@ func _process(delta):
 	#jump anim
 	if Player.velocity.y < 0.0:
 		animation_player.play("jumping")
+
 	elif Player.velocity.y > 0.0:
 		animation_player.play("jumping")
+	

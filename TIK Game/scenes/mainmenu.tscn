@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bn0cb3kwpv3qn"]
+
+[ext_resource type="Texture2D" uid="uid://d1v7ab3dneav7" path="res://Assets/images/Menu.png" id="1_5mbse"]
+[ext_resource type="Script" uid="uid://cl8ullkvitr1j" path="res://scenes/mainmenu.gd" id="1_r3g3c"]
+[ext_resource type="FontFile" uid="uid://dxlybeh2e3p1s" path="res://Assets/images/BadPad.ttf" id="2_natt5"]
+[ext_resource type="AudioStream" uid="uid://bvhoi26uiohic" path="res://Assets/sound/xtremefreddy-game-music-loop-7-145285.mp3" id="4_3vvtq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_natt5"]
+texture = ExtResource("1_5mbse")
+
+[node name="Mainmenu" type="Control" unique_id=718614315]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3g3c")
+
+[node name="Panel" type="Panel" parent="." unique_id=716198662]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_natt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1005882041]
+modulate = Color(2.1331975, 2.1331975, 2.1331975, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2996597
+anchor_top = 0.5
+anchor_right = 0.6767361
+anchor_bottom = 0.70865434
+offset_left = -0.2079773
+offset_top = -83.0
+offset_right = 0.39996338
+offset_bottom = -0.20800781
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.6344381, 0.6344381, 1)
+theme_override_colors/font_outline_color = Color(0.23921569, 0.30980393, 0.5372549, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_natt5")
+theme_override_font_sizes/font_size = 100
+text = "
+P l a y"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=2038385444]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 348.0
+offset_top = 156.0
+offset_right = -363.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_natt5")
+theme_override_font_sizes/font_size = 30
+text = "q u i t"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=565125994]
+stream = ExtResource("4_3vvtq")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
